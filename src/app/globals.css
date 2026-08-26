@@ -7,6 +7,7 @@
   --sand-100: #f4e3b8;
   --sand-300: #e0bd75;
   --sand-500: #c99b46;
+  --sand-600: #ac8339;
   --sand-700: #8f6a2c;
 
   /* Below ground: aquifer strata */
@@ -38,6 +39,7 @@
   --color-sand-100: var(--sand-100);
   --color-sand-300: var(--sand-300);
   --color-sand-500: var(--sand-500);
+  --color-sand-600: var(--sand-600);
   --color-sand-700: var(--sand-700);
   --color-aquifer-300: var(--aquifer-300);
   --color-aquifer-500: var(--aquifer-500);

@@ -4,13 +4,16 @@ import { motion } from "framer-motion";
 import { menu } from "@/data/business";
 
 const depthOrder = [
-  { id: "bagels", label: "Surface", bg: "bg-sand-50", text: "text-ink", line: "border-ink/15" },
-  { id: "soups-salads", label: "−2M", bg: "bg-sand-100", text: "text-ink", line: "border-ink/15" },
-  { id: "cafe-sandwiches", label: "−4M", bg: "bg-sand-300", text: "text-ink", line: "border-ink/20" },
-  { id: "hot-stuff", label: "−6M", bg: "bg-sand-500", text: "text-ink", line: "border-ink/20" },
-  { id: "espresso", label: "−8M", bg: "bg-aquifer-300", text: "text-aquifer-900", line: "border-aquifer-900/20" },
-  { id: "pharoccinos", label: "−10M", bg: "bg-aquifer-500", text: "text-sand-50", line: "border-sand-50/20" },
-  { id: "oasis-originals", label: "The Aquifer", bg: "bg-aquifer-900", text: "text-sand-50", line: "border-sand-50/15" },
+  { id: "breakfast-sandwiches", label: "Surface", bg: "bg-sand-50", text: "text-ink", line: "border-ink/15" },
+  { id: "parfait", label: "−1M", bg: "bg-sand-100", text: "text-ink", line: "border-ink/15" },
+  { id: "toast", label: "−2M", bg: "bg-sand-300", text: "text-ink", line: "border-ink/20" },
+  { id: "grilled-paninis", label: "−3M", bg: "bg-sand-500", text: "text-ink", line: "border-ink/20" },
+  { id: "sandwiches", label: "−4M", bg: "bg-sand-600", text: "text-ink", line: "border-ink/20" },
+  { id: "salads-wraps", label: "−5M", bg: "bg-sand-700", text: "text-white", line: "border-white/20" },
+  { id: "flatbreads", label: "−6M", bg: "bg-aquifer-300", text: "text-aquifer-900", line: "border-aquifer-900/20" },
+  { id: "kids-menu", label: "−7M", bg: "bg-aquifer-500", text: "text-white", line: "border-white/20" },
+  { id: "drinks", label: "−8M", bg: "bg-aquifer-700", text: "text-white", line: "border-white/15" },
+  { id: "signature-drinks", label: "The Aquifer", bg: "bg-aquifer-900", text: "text-white", line: "border-white/15" },
 ] as const;
 
 export function Menu() {
