@@ -98,7 +98,7 @@ export function HoursLocation() {
               href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(business.address.mapsQuery)}`}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-2 rounded-sm bg-aquifer-300 px-5 py-2.5 font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-wider text-aquifer-900"
+              className="mt-4 inline-flex items-center gap-2 rounded-sm bg-aquifer-300 px-5 py-2.5 font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-wider text-aquifer-900 shadow-[0_0_24px_-4px_rgba(79,179,173,0.7)] transition-transform hover:scale-[1.03]"
             >
               <Navigation size={16} />
               Get Directions

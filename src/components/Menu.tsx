@@ -24,10 +24,10 @@ export function Menu() {
           <div key={depth.id} className={`${depth.bg} ${depth.text} py-16 sm:py-20`}>
             <div className="mx-auto max-w-3xl px-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 32, scale: 0.96 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ type: "spring", stiffness: 140, damping: 18, mass: 0.6 }}
               >
                 <div className="mb-8 flex items-baseline justify-between gap-4">
                   <h2 className="font-[family-name:var(--font-display)] text-3xl font-bold uppercase tracking-wide sm:text-4xl">
@@ -44,10 +44,20 @@ export function Menu() {
                   </p>
                 )}
 
-                <ul className="space-y-0">
+                <motion.ul
+                  className="space-y-0"
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, margin: "-80px" }}
+                  variants={{ show: { transition: { staggerChildren: 0.06 } } }}
+                >
                   {section.items.map((item) => (
-                    <li
+                    <motion.li
                       key={item.name}
+                      variants={{
+                        hidden: { opacity: 0, x: -12 },
+                        show: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 260, damping: 24 } },
+                      }}
                       className={`flex items-baseline justify-between gap-6 border-t py-3.5 first:border-t-0 ${depth.line}`}
                     >
                       <div>
@@ -63,9 +73,9 @@ export function Menu() {
                       <span className="whitespace-nowrap font-[family-name:var(--font-data)] text-sm tabular-nums opacity-90">
                         {item.price}
                       </span>
-                    </li>
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
               </motion.div>
             </div>
           </div>

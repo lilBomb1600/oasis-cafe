@@ -1,4 +1,5 @@
 import { Nav } from "@/components/Nav";
+import { DepthGauge } from "@/components/DepthGauge";
 import { Hero } from "@/components/Hero";
 import { HalalBand } from "@/components/HalalBand";
 import { Menu } from "@/components/Menu";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Nav />
+      <DepthGauge />
       <main className="flex-1">
         <Hero />
         <HalalBand />

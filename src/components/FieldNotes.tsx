@@ -25,11 +25,12 @@ export function FieldNotes() {
           {gallery.map((g, i) => (
             <motion.figure
               key={g.src}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40, scale: 0.7, rotate: 0 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              whileHover={{ scale: 1.05, rotate: 0, zIndex: 10 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className={`${rotations[i % rotations.length]} rounded-sm border-4 border-sand-50 bg-sand-50 p-1.5 shadow-lg`}
+              transition={{ type: "spring", stiffness: 180, damping: 16, delay: i * 0.1 }}
+              className={`${rotations[i % rotations.length]} relative rounded-sm border-4 border-sand-50 bg-sand-50 p-1.5 shadow-lg transition-shadow hover:shadow-2xl`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
